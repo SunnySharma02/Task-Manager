@@ -6,14 +6,34 @@
         "use": "@vercel/node"
       },
       {
-        "src": "dist/",
+        "src": "dist/**",
         "use": "@vercel/static"
       }
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "index.js"
+        "src": "/tasks",
+        "dest": "Task.js"
+      },
+      {
+        "src": "/tasks/(.*)",
+        "dest": "Task.js"
+      },
+      {
+        "src": "/task/(.*)",
+        "dest": "Task.js"
+      },
+      {
+        "src": "/tasks/(.*)",
+        "dest": "Task.js"
+      },
+      {
+        "src": "/",
+        "dest": "dist/index.html"
+      },
+      {
+        "src": "/(.+)",
+        "dest": "dist/$1"
       }
     ]
   }

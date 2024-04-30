@@ -12,7 +12,7 @@
     ],
     "routes": [
       {
-        "src": "/(.*)",
+        "src": "/tasks",
         "dest": "Task.js"
       },
       {
@@ -33,7 +33,7 @@
       },
       {
         "src": "/(.+)",
-        "dest": "dist/$1"
+        "dest": "dist/"
       }
     ]
   }

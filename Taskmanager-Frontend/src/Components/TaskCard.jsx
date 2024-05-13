@@ -3,14 +3,14 @@ import axios from "axios"
 function TaskCard({title, isComplete, getTasks, taskId}) {
 
   const handleComplete = async ()=> {
-    await axios.patch(`http://localhost:8080/tasks/${taskId}/edit`, {
+    await axios.patch(`https://task-manager-blush-eta.vercel.app/tasks/${taskId}/edit`, {
       isComplete: true 
     })
     getTasks()
   }
 
   const handleDelete = async ()=> {
-    await axios.delete(`http://localhost:8080/tasks/${taskId}/delete`)
+    await axios.delete(`https://task-manager-blush-eta.vercel.app/tasks/${taskId}/delete`)
     getTasks()
   }
 

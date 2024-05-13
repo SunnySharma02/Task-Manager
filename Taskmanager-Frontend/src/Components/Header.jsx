@@ -8,7 +8,7 @@ function Header({setTasks}) {
     const title = e.target[0].value
     // console.log(title)
 
-    const response = await axios.post("http://localhost:8080/task/new", {title})
+    const response = await axios.post("https://task-manager-blush-eta.vercel.app/task/new", {title})
 
     setTasks(prev => [...prev, response.data])
   }

@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react"
 import Header from "./Components/Header"
 import TaskContainor from "./Components/TaskContainor"
+import { dev } from '$app/environment';
+import { inject } from '@vercel/analytics';
+ 
+inject({ mode: dev ? 'development' : 'production' });
 
 const App = () => {
 
